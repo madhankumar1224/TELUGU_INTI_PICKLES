@@ -1,15 +1,15 @@
 
-import './App.css'
-
+import './App.css';
+import RoutingApp from './RouteModule/Routing';
 function App() {
 
 
   return (
-    <>
-      
-<h1>madhan</h1>
-    </>
+    
+    <RoutingApp/>
+   
+    
   )
 }
 
-export default App
+export default App;
