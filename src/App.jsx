@@ -1,15 +1,25 @@
 
-import './App.css'
+import { useState } from 'react';
+import './App.css';
+import RoutingApp from './RouteModule/Routing';
+// import { AuthProvider } from './AuthProvider';
+// import Dashboard from './Home/Dashboard';
+
 
 function App() {
-
-
+ 
   return (
     <>
-      
-<h1>madhan</h1>
-    </>
+   
+    <RoutingApp/>
+     
+     
+     {/* <AuthProvider>
+      <Dashboard/>
+     </AuthProvider> */}
+   
+   </>
   )
 }
 
-export default App
+export default App;
