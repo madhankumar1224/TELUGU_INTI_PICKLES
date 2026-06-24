@@ -1,0 +1,494 @@
+
+
+*{
+    box-sizing: border-box;
+}
+
+p{
+    padding: 0;
+    margin: 0;
+}
+
+.LoginformPage *, .LoginformPage *::before, .LoginformPage *::after {
+  box-sizing: border-box;
+}
+
+.LoginPage{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+.LoginPage > header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+   justify-content: center;
+    align-items: center;
+
+}
+
+
+.LoginformPage{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+    row-gap: 1.5rem;
+}
+
+
+.LoginformPage > .box{
+    width: 100%;
+    position: relative;
+
+}
+
+/* .box>input{
+    position: relative;
+   width: 100%;
+
+   height: 2.25rem;
+   border: 1px solid var(--golden-harvest);
+   padding-left: 2.5rem;
+  
+
+} */
+
+.box>.InputClassCss{
+       position: relative;
+   width: 100%;
+
+   height: 2.25rem;
+   border: 1px solid var(--golden-harvest);
+   padding-left: 2.5rem;
+}
+
+
+
+.box>input:focus{
+    outline: none;
+   
+}
+.box>.inputTypeIcon{
+    position: absolute;
+    top: 50%;
+    left:2%;
+    transform: translateY(-50%);
+    color: var(--heritage-burgandy);
+
+}
+
+#customLoginEmailCheckFill{
+    position: absolute;
+    right: 3%;
+    top:50%;
+    transform: translateY(-50%);color: var(--Manago-leaf-green);
+
+    
+}
+
+#customLoginEmailCrossFill{
+     position: absolute;
+    right: 3%;
+    top:50%;
+    transform: translateY(-50%);
+    color: var(--heritage-burgandy);
+}
+
+.box>p{
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    
+}
+
+/* .LoginPage>header>img{
+    max-width: 100%;
+    height: auto;
+} */
+
+/* .CompanyImage{
+max-width: 100%;
+height: auto;
+} */
+
+
+.loginPasswordEyevisibleToggleIcon{
+    position: absolute;
+    right: 3%;
+    top:50%;
+    transform: translateY(-50%);
+    color: var(--heritage-burgandy);
+    font-size: large;
+}
+
+.forgetPasswordCss{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.forgetPasswordCss> input[type="checkbox"]{
+    margin: 0;
+}
+
+/* .insideCheckbox{
+    display: ;
+} */
+
+.checkboxGroup{
+display: flex;
+    align-items: center;
+    gap: 0.5rem
+}
+
+.checkboxGroup > input[type="checkbox"] {
+    margin: 0;
+}
+
+.forgotLink{
+    text-decoration: none;
+    color: var(--heritage-burgandy);
+}
+
+
+button[type="submit"]{
+    color: var(--golden-harvest);
+    background-color: var(--heritage-burgandy);
+    height: 2.25rem;
+    border: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: large;
+}
+
+.LoginTittle{
+    font-size: 2rem;
+    color: var(--heritage-burgandy);
+    font-family: math;
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: 0.2rem;
+}
+
+.FooterGroupCss{
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+}
+
+.socialMediaIcons{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.socialMediaIcons>i{
+    font-size: 2.5rem;
+}
+.lineDivider{
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.lineDivider::before,.lineDivider::after{
+    content: "";
+     flex:1;
+    border-bottom:2px solid var(--golden-harvest); 
+}
+
+
+.lineDivider:not(:empty)::before {
+  margin-right: 1rem; 
+}
+
+.thematic-break:not(:empty)::after {
+  margin-left: 1rem; 
+}
+
+.lineDivider>span{
+    color: var(--Manago-leaf-green);
+    font-weight: 700;
+}
+
+#fbIcon{
+    padding: 0rem 1rem 0rem 0rem;
+    color: blue;
+}
+
+#instaIcon{
+    padding: 0rem 1rem 0rem 0rem;
+    color: #e56969 ;
+}
+
+#whatsappIcon{
+    color: #075E54;
+}
+
+
+.NavigatingLinksCss{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+
+}
+
+.NavigatingLinksCss>p{
+
+    font-weight: 700;
+    color: var(--golden-harvest);
+}
+
+.NavigatingSignupCss{
+    text-decoration: none;
+    color: var(--heritage-burgandy);
+    font-weight: 700;
+    padding-left: 0.5rem;
+    padding-right: 1rem;
+    border-right: 2px solid var(--golden-harvest);
+}
+
+#NavigatingHomeCss{
+    text-decoration: none;
+    color: var(--heritage-burgandy);
+    font-weight: 700;
+    padding-left: 0.5rem;
+    
+}
+
+
+@media (width<=768px){
+/* .CompanyMainCss{
+ display: none;
+} */
+
+.CompanyLoginChildCss{
+    display: none;
+}
+}
+
+
+
+ @media (768px <= width <= 1024px){
+    .CompanyMainCss{
+       
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+          gap: 30px;  
+    }
+
+.CompanyLoginChildCss{
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+    justify-content: stretch;
+    width: calc(60% - 15px);
+
+}
+
+    .CompanyMainCss> section{
+ 
+        display: flex;
+        flex-direction: column;
+         width: calc(40% - 15px);
+    margin: 2rem 0rem 0rem 0rem;
+    background-color: var(--white-color);
+     margin-right: 1rem;
+    }
+
+    /* .LoginPage{
+            background-color: var(--background-color); 
+         margin-right: 1rem;
+    } */
+
+    .companyTitleCss{
+font-size: 2rem;
+    color: #800020;
+    font-family: math;
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: 0.2rem;
+    }
+
+   .ImageLogo{
+
+    width: 150px;
+    height: 150px;
+    mix-blend-mode: multiply;
+   }
+
+
+   .ceramicPotCss{
+    width: 70%;
+    height: 60%;
+   }
+
+
+
+
+
+
+
+
+   
+   .designEdgeLogo_1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+  opacity: 0.2;
+  }
+
+
+  .designEdgeLogo_2{
+  position: absolute;
+ top: 0%;
+  right: 0%;
+  opacity: 0.2;
+  z-index: 0;
+  }
+
+  .designEdgeLogo_3{
+    position: absolute;
+   bottom: 0%;
+  left: 0%;
+  opacity: 0.2;
+
+  }
+   .designEdgeLogo_4{
+    position: absolute;
+   bottom: 0%;
+  right: 0%;
+  opacity: 0.2;
+   }
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ @media (width >= 1024px){
+    .CompanyMainCss{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+          gap: 30px;  
+    }
+
+.CompanyLoginChildCss{
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+    justify-content: stretch;
+    width: calc(60% - 15px);
+
+}
+
+    .CompanyMainCss> section{
+ 
+        display: flex;
+        flex-direction: column;
+         width: calc(40% - 15px);
+    margin: 2rem 0rem 0rem 0rem;
+    background-color: var(--white-color);
+     margin-right: 1rem;
+     z-index: 10;
+    }
+
+     /* .LoginPage{
+             background-color: var(--background-color); 
+         margin-right: 1rem; 
+    }   */
+
+    .companyTitleCss{
+font-size: 2rem;
+    color: #800020;
+    font-family: math;
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: 0.2rem;
+    }
+
+   .ImageLogo{
+
+    width: 150px;
+    height: 150px;
+    mix-blend-mode: multiply;
+   }
+
+
+   .ceramicPotCss{
+    width: 70%;
+    height: 60%;
+   }
+
+
+
+
+
+
+
+
+
+   .designEdgeLogo_1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+  opacity: 0.2;
+  }
+
+
+  .designEdgeLogo_2{
+  position: absolute;
+ top: 0%;
+  right: 0%;
+  opacity: 0.2;
+  z-index: 0;
+  }
+
+  .designEdgeLogo_3{
+    position: absolute;
+   bottom: 0%;
+  left: 0%;
+  opacity: 0.2;
+
+  }
+   .designEdgeLogo_4{
+    position: absolute;
+   bottom: 0%;
+  right: 0%;
+  opacity: 0.2;
+   }
+
+}

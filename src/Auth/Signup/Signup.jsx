@@ -21,7 +21,8 @@ import { PhoneInput ,  defaultCountries,parseCountry} from 'react-international-
 import * as EmailValidator from 'email-validator';
 import './Signup.css';
 
-import UserFetch from "../../APIS/UserFetch";
+import UserFetch from "../../APIS/userFetch";
+import { useCheck } from "../../APIS/useCheck";
 
 
 
@@ -39,6 +40,14 @@ const isPhoneValid = (phone) => {
 
 
 
+ const url = "http://localhost:5000/user/signup";
+
+const config = {
+  headers: {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json'
+  }
+};
 
 
 
@@ -79,8 +88,19 @@ const [passwordErrorMessage,setPasswordErrorMessage]=useState({
 
     });
    
+
+
+
+
+  const {executeFunction,data}=useCheck(url,config);
+
+
+
     console.log("formData:",formData);
     //const [phone, setPhone] = useState('');
+
+
+
 
   const isValid = isPhoneValid(formData.phoneNumber);
 
@@ -225,13 +245,14 @@ function confirmPasswordToggleHandler(event){
 }
 
 
-async function submitHandler(event){
+ function submitHandler(event){
 event.preventDefault();
 console.log("formdata submit",formData);
-  let url="https://www.localhost.com/user"
-  let data= await UserFetch(url,formData);
+
+executeFunction(formData);
+// console.log("signup response today",response.data);
    
-  console.log("user data",data);
+  // console.log("user data",data);
 
  
 }

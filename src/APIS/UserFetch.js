@@ -1,16 +1,37 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import axios from "axios";
 
-function UserFetch(url,userDetails){
+function userFetch(url,userDetails,config){
 
   const [error,setError]=useState(null)
     const [data,setData]=useState(null);
   const [loading, setLoading] = useState(true);
-    useEffec(()=>{
+
+  
+// const chekingData=useCallback(async(bodyData=null)=>{
+
+
+// let postedData= await axios.post(url,userDetails,config);
+//       postedData.then((res)=>{
+//     res.data.json();
+//      setData(data);
+//    }
+    
+//     ).catch((error)=>{
+//    setError(error);
+//         console.log(error);
+//     });
+
+// },[url,config])
+
+
+
+
+    useEffect(()=>{
 
         async function userSignupDetails(){    
 
-     let postedData= await axios.post(url,userDetails);
+     let postedData= await axios.post(url,userDetails,config);
       postedData.then((res)=>{
     res.data.json();
      setData(data);
@@ -24,9 +45,9 @@ function UserFetch(url,userDetails){
 userSignupDetails();
     
  }
- },[url]);
+ },[url,config]);
 
     return [data]
 }
 
-export default UserFetch;
+export default userFetch;

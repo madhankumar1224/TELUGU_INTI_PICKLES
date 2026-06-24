@@ -1,0 +1,176 @@
+/* 
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 50px; 
+  width: 100vw;
+  box-sizing: border-box;
+} */
+
+/* .spinnerWrapper {
+  position: relative;
+  width: 150px;
+  height: 150px;
+} */
+
+
+/* .spinnerClass {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 150px;
+  width: 150px;
+  border: 5px solid #e0e0e0;   
+  border-top-color: #DAA520;     
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  box-sizing: border-box;
+} */
+
+
+ /* .pickleJarImage {
+  position: absolute;
+  top: 10px;                     
+  left: 10px;
+  width: 130px;                  
+  height: 130px;
+  border-radius: 50%;
+  object-fit: contain;
+}  */
+
+/* Text style placed cleanly beneath the loader */
+/* .loadingText {
+  margin-top: 20px;
+  font-family: sans-serif;
+  color: #DAA520;
+  font-weight: bold;
+  font-size: 1.2rem;
+} */
+
+/* Rotation animation */
+/* @keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Container to place everything at the middle top of the page */
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 50px; 
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+/* Container holding both the image and the spinning border */
+.spinnerWrapper {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+/* The actual spinning element wrapping around the image */
+.spinnerClass {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 150px;
+  width: 150px;
+  border: 5px solid rgba(218, 165, 32, 0.2); /* Soft gold shadow ring */
+  border-top-color: #DAA520;                 /* Solid gold spinning piece */
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;      /* Clean continuous spin */
+  box-sizing: border-box;
+}
+
+/* The image placed inside that subtly wiggles and breathes */
+.pickleJarImage {
+  position: absolute;
+  top: 10px;                     
+  left: 10px;
+  width: 130px;                  
+  height: 130px;
+  border-radius: 50%;
+  object-fit: contain;
+  /* Applies a gentle, playful wiggle effect */
+  animation: wiggle 2.5s ease-in-out infinite; 
+}
+
+/* Text style placed cleanly beneath the loader */
+.loadingText {
+  margin-top: 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #DAA520;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+/* 1. Spin animation for outer ring */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 2. Soft, premium wiggle and pulse animation for the jar */
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(-3deg) scale(1.03); /* Tilts left and grows slightly */
+  }
+  75% {
+    transform: rotate(3deg) scale(1.03);  /* Tilts right and grows slightly */
+  }
+}
