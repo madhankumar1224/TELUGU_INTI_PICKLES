@@ -97,7 +97,6 @@
 
 
 
-/* Container to place everything at the middle top of the page */
 .pageContainer {
   display: flex;
   flex-direction: column;
@@ -108,24 +107,23 @@
   box-sizing: border-box;
 }
 
-/* Container holding both the image and the spinning border */
+
 .spinnerWrapper {
   position: relative;
   width: 150px;
   height: 150px;
 }
 
-/* The actual spinning element wrapping around the image */
 .spinnerClass {
   position: absolute;
   top: 0;
   left: 0;
   height: 150px;
   width: 150px;
-  border: 5px solid rgba(218, 165, 32, 0.2); /* Soft gold shadow ring */
-  border-top-color: #DAA520;                 /* Solid gold spinning piece */
+  border: 5px solid rgba(218, 165, 32, 0.2); 
+  border-top-color: #DAA520;               
   border-radius: 50%;
-  animation: spin 1.2s linear infinite;      /* Clean continuous spin */
+  animation: spin 1.2s linear infinite;      
   box-sizing: border-box;
 }
 
@@ -138,11 +136,11 @@
   height: 130px;
   border-radius: 50%;
   object-fit: contain;
-  /* Applies a gentle, playful wiggle effect */
+
   animation: wiggle 2.5s ease-in-out infinite; 
 }
 
-/* Text style placed cleanly beneath the loader */
+
 .loadingText {
   margin-top: 25px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -162,15 +160,15 @@
   }
 }
 
-/* 2. Soft, premium wiggle and pulse animation for the jar */
+
 @keyframes wiggle {
   0%, 100% {
     transform: rotate(0deg) scale(1);
   }
   25% {
-    transform: rotate(-3deg) scale(1.03); /* Tilts left and grows slightly */
+    transform: rotate(-3deg) scale(1.03); 
   }
   75% {
-    transform: rotate(3deg) scale(1.03);  /* Tilts right and grows slightly */
+    transform: rotate(3deg) scale(1.03);  
   }
 }
