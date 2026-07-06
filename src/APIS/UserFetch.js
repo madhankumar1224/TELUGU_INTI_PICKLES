@@ -8,21 +8,7 @@ function userFetch(url,userDetails,config){
   const [loading, setLoading] = useState(true);
 
   
-// const chekingData=useCallback(async(bodyData=null)=>{
 
-
-// let postedData= await axios.post(url,userDetails,config);
-//       postedData.then((res)=>{
-//     res.data.json();
-//      setData(data);
-//    }
-    
-//     ).catch((error)=>{
-//    setError(error);
-//         console.log(error);
-//     });
-
-// },[url,config])
 
 
 

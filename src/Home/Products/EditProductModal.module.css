@@ -1,0 +1,80 @@
+.modalOverlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.6);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999999;
+
+    margin: 1rem;
+
+}
+
+.modal{
+
+    width:700px;
+
+    background:white;
+
+    border-radius:1px;
+
+    padding:30px;
+
+    position:relative;
+
+}
+
+.editContainerCss{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+    row-gap: 1rem;
+
+}
+
+.editFormChildDesign{
+    width: calc(50% - 0.5rem);
+    height: 2.25rem;
+    border: 1px solid var(--golden-harvest);
+    padding-left: 1rem;
+
+}
+
+.editButtonContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: calc(50% - 0.5rem);
+    column-gap: 1rem;
+}
+
+.editCloseButton{
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    width: 70px;
+    font-size: 1rem;
+}
+
+.editUpdateButton{
+    background-color: var(--golden-harvest) !important;
+    color: var(--heritage-burgandy) !important;
+
+    /* color: white !important; */
+
+    text-transform: capitalize !important;
+}
+
+#editTitleButton{
+    color: var(--heritage-burgandy);
+}

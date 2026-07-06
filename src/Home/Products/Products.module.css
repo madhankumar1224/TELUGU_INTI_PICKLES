@@ -1,0 +1,558 @@
+
+.insideSecondFirstChild{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    height: 50px;
+    /* width: calc(100% - 4rem); */
+    width:  100%;
+
+    background-color: #ffffff;
+}
+
+.insideTwoChild{
+
+    height: calc(100% - 50px);
+     /* width: calc(100% - 4rem); */
+    width: 100%;
+    /* background-color: chartreuse; */
+    /* background-color: var(--heritage-burgandy); */
+    /* background-color: var(--golden-harvest); */
+
+
+    border: 1px solid var(--golden-harvest);
+    /* border:1px solid black; */
+
+
+
+
+
+
+
+      overflow-y: auto; 
+    /* overflow-x: hidden;  */
+
+overflow-x: auto;
+
+    position: relative;
+
+z-index: 5;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.insideTwoChild::-webkit-scrollbar {
+    width: 4px;
+    
+}
+
+.insideTwoChild::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.insideTwoChild::-webkit-scrollbar-thumb {
+    background: #DAA520; 
+    border-radius: 4px;
+}
+
+.insideTwoChild::-webkit-scrollbar-thumb:hover {
+    background: #800020; /* Burgundy on hover */
+}
+
+
+
+
+
+
+
+.inactiveEditDesign{
+display: none;
+    
+}
+
+
+.activeEditDesign{
+display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ButtonAndSearchContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 2rem;
+}
+
+
+
+
+.SecondSearchCss{
+    position: relative;
+}
+
+
+.SecondSearchCss >.searchDesign{
+    height: 2.25rem;
+    border: 1px solid var(--golden-harvest);
+    position: relative;
+
+padding-right: 2rem;
+padding-left: 0.2rem;
+}
+
+.SecondSearchCss >.searchDesign:focus{
+outline: none;
+}
+
+
+.SecondSearchCss>i{
+    position: absolute;
+    top:50%;
+    right: 2%;
+    transform: translateY(-50%);
+    color: var(--heritage-burgandy);
+   
+}
+
+.SecondSearchCss > input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+
+
+
+
+.SeacrchCateogryCss{
+   
+
+    width: 50%;
+}
+.searchInputCss{
+    width: 70%;
+    position: relative;
+}
+.searchInputCss>input[type="search"]{
+
+    position: relative;
+    height:2.25rem;
+    border: 1px solid var(--golden-harvest);
+    width: 100%;
+     padding-right: 2rem; 
+  padding-left: 0.5rem;
+}
+
+.searchInputCss>.searchDesign1{
+outline: none;
+   
+
+}
+
+
+.searchInputCss > input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+
+
+.searchInputCss>i{
+    position: absolute;
+    top:50%;
+    right: 0.75rem;
+    transform: translateY(-50%);
+   pointer-events: none;
+    color: var(--heritage-burgandy);
+
+}
+
+
+
+.AddButtonDesign{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--heritage-burgandy);
+    align-items: center;
+    height: 2.25rem;
+}
+
+.AddButtonDesign >i{
+    color: var(--golden-harvest);
+    /* color: white; */
+    font-size: 1.5rem;
+    padding-left: 0.4rem;
+}
+
+.AddButtonDesign>button{
+    font-family: math;
+    font-weight: 400;
+    /* color: white; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fileUploadWrapper {
+  position: relative;
+  width: 100%;
+  min-height: 70px; 
+  background-color: var(--heritage-beige);
+  border: 1px dashed var(--golden-harvest);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem; 
+  box-sizing: border-box;
+}
+
+#imageUploadDesign{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; 
+  cursor: pointer;
+  z-index: 2; 
+}
+
+.insideJarImage {
+  height: 50px;
+  width: 50px;
+  pointer-events: none; 
+  z-index: 1;
+}
+
+
+.uploadText {
+  font-size: 0.85rem;
+  color: #555;
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+.fileUploadWrapper.hasFiles {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.fileListContainer {
+  width: 100%;
+  z-index: 1;
+  pointer-events: none; 
+}
+
+.fileListTitle {
+  font-weight: bold;
+  font-size: 0.85rem;
+  margin: 0 0 0.25rem 0;
+  color: #333;
+}
+
+.fileList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.fileItem {
+  font-size: 0.8rem;
+  color: #0066cc;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  margin-bottom: 2px;
+}
+
+.productDetailDesign{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.actionsDesign {
+    display: flex;
+    justify-content: center;     
+    align-items: center;         
+    gap: 10px;
+    height: 100%;
+}
+
+.actionsDesign button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+
+    min-width:4rem;
+    height:36px;
+
+    border:none;
+  
+
+    cursor:pointer;
+font-family: 'Inter, sans-serif';
+    font-size:0.8 rem;
+    font-weight:500;
+
+  
+}
+
+.editBtn {
+    background-color: #DAA520;
+    color: #800020;
+}
+
+.updateBtn {
+    background-color: #4CAF50;
+    color: #ede8c3;
+}
+
+
+.deleteBtn {
+    background-color: #800020;
+    color: #DAA520;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tableWrapper{
+
+overflow-x:auto;
+
+width:100%;
+
+}
+
+table{
+
+min-width:900px;
+
+}
+
+
+
+
+
+
+@media(max-width:780px){
+
+.insideSecondFirstChild{
+
+flex-direction:column;
+
+align-items:stretch;
+
+height:auto;
+
+gap:15px;
+
+}
+
+.insideTwoChild{
+
+    margin-top: 0.6rem;
+}
+
+.SeacrchCateogryCss{
+
+width:100%;
+
+}
+
+.searchInputCss{
+
+width:100%;
+
+}
+
+.ButtonAndSearchContainer{
+
+width:100%;
+
+flex-direction:column;
+
+gap:12px;
+
+align-items:stretch;
+
+}
+
+.SecondSearchCss{
+
+width:100%;
+
+}
+
+.SecondSearchCss input{
+
+width:100%;
+
+}
+
+.AddButtonDesign{
+
+justify-content:center;
+
+width:100%;
+
+}
+
+
+
+
+.addingPicklesChildTask{
+
+width:100%;
+
+}
+
+
+
+}

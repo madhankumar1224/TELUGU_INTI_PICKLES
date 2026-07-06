@@ -101,7 +101,7 @@ event.preventDefault();
 console.log("loginFormDetails",loginState);
 try{
 executeFunction(loginState);
-console.log("xx");
+ console.log("xx");
 
 
 
