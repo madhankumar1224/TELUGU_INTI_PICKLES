@@ -12,7 +12,8 @@ import { useContext } from "react";
 import AuthorContext from "../../AuthContext";
 import ProtectedRoute from "../ProtectedRoute";
 
- const url = "http://localhost:5000/user/login";
+ //const url = "http://localhost:5000/user/login";
+  const url="https://backend-telugu-inti-pachalu.onrender.com/user/login"
 
 const config = {
   headers: {

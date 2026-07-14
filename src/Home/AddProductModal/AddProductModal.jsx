@@ -25,7 +25,8 @@ function AddProductModal({open,onClose,onProductAdded,token}){
 
 
 
-const url = "http://localhost:5000/product/addPickle";
+//const url = "http://localhost:5000/product/addPickle";
+ const url="https://backend-telugu-inti-pachalu.onrender.com/product/addPickle"
 
 const config = {
   headers: {

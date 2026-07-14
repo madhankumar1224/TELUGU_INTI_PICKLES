@@ -40,7 +40,8 @@ const isPhoneValid = (phone) => {
 
 
 
- const url = "http://localhost:5000/user/signup";
+ //const url = "http://localhost:5000/user/signup";
+ const url="https://backend-telugu-inti-pachalu.onrender.com/user/signup"
 
 const config = {
   headers: {

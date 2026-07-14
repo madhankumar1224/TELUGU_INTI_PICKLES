@@ -119,7 +119,9 @@ function EditProductModal({
 
             console.log("formdata",data);
 
-            const url = `http://localhost:5000/product/updatepickle/${product._id}`;
+            //const url = `http://localhost:5000/product/updatepickle/${product._id}`;
+             const url=`https://backend-telugu-inti-pachalu.onrender.com/product/updatepickle/${product._id}`;
+
             console.log("formdata 22",data);
 
             const updatedProduct = await updatePickleFunction(
