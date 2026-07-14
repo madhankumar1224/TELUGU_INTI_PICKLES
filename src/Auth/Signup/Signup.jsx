@@ -21,7 +21,7 @@ import { PhoneInput ,  defaultCountries,parseCountry} from 'react-international-
 import * as EmailValidator from 'email-validator';
 import './Signup.css';
 
-import UserFetch from "../../APIS/userFetch";
+ import userFetch from "../../APIS/userFetch";
 import { useCheck } from "../../APIS/useCheck";
 
 
