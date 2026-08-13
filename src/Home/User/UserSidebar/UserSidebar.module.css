@@ -1,0 +1,106 @@
+
+
+
+*,::before,::after{
+    box-sizing: border-box;
+}
+
+.sidebarvisible ,.sidebarhide{
+    display: flex;
+    height: 100vh;
+    max-width: 100vw;
+    width:250px;
+    background-color: #ede8c3;
+    z-index: 1000;
+    position: absolute;
+    top:0rem;
+    transition: left 0.3s ease-in-out;
+
+}
+
+.sidebarvisible{
+    left: 0;
+
+}
+.sidebarhide{
+left:-320px;
+
+}
+
+.sidebarListContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.menuList{
+    color: var(--heritage-burgandy);
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    height: 2rem;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1.6rem 0 1.6rem 0;
+   
+
+}
+
+.menuList:hover{
+    background-color: var(--golden-harvest);
+    cursor: pointer;
+}
+.ceramicPot{
+    mix-blend-mode: multiply;
+    height: 3rem;
+}
+.contentDesign{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.iconDesign{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0 1rem 0 1rem;
+}
+
+.crossMarkContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.crossMarkDesign{
+    font-size: 1.5rem;
+    color: var(--golden-harvest);
+    font-weight: bold;
+}
+
+.titleDesign{
+    font-size:1rem;
+    color: var(--golden-harvest);
+    font-weight: bold;
+}
+
+.picklesDesign{
+    height: 7rem;
+    object-fit: contain;
+}
+
+.picklesContent{
+    text-align: center;
+    color: var(--Manago-leaf-green);
+    font-weight: bold;
+    font-family: cursive;
+}
+
+.loveicon{
+    color: var(--golden-harvest);
+}

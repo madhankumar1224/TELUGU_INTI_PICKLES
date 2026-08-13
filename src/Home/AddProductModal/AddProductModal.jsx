@@ -25,8 +25,8 @@ function AddProductModal({open,onClose,onProductAdded,token}){
 
 
 
-//const url = "http://localhost:5000/product/addPickle";
- const url="https://backend-telugu-inti-pachalu.onrender.com/product/addPickle"
+const url = "http://localhost:5000/product/addPickle";
+// const url="https://backend-telugu-inti-pachalu.onrender.com/product/addPickle"
 
 const config = {
   headers: {
@@ -34,7 +34,7 @@ const config = {
     'Accept': 'application/json',
     // 'content-type':'multipart/formdata'
   }
-};
+}; 
 
 
 const {addExecutePicklefunction,
@@ -73,7 +73,7 @@ const {addExecutePicklefunction,
   pickleId:'',
   picklePrice:'',
   pickleDiscont:"",
-  pickleCategory:'',
+  pickleCategory:'', 
   pickleDescription:'',
   pickleImage:[...fileNames]
  })
@@ -312,7 +312,7 @@ theme: "light",
                   placeholder='drag and upload'
                   id={styles.imageUploadDesign}
                  
-                   onChange={AddingPickleHandler}
+                  onChange={AddingPickleHandler}
                   required
                   accept="image/png, image/jpeg,.pdf, .doc, .docx, .txt"
                   capture="environment" 

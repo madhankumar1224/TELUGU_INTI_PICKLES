@@ -40,8 +40,8 @@ const isPhoneValid = (phone) => {
 
 
 
- //const url = "http://localhost:5000/user/signup";
- const url="https://backend-telugu-inti-pachalu.onrender.com/user/signup"
+ const url = "http://localhost:5000/user/signup";
+ //const url="https://backend-telugu-inti-pachalu.onrender.com/user/signup"
 
 const config = {
   headers: {
@@ -325,7 +325,7 @@ useEffect(() => {
           <div className="CompanyLogo">
             <img src={Logo} alt="logo"  />
             <p id="companyTitleCss">TELUGU PICKLES</p>
-              <img src={bgImgLogo} alt="bgImgLogo" className="ImageBackgroundCss"  style={{width:"70%",height:'60%'}}/>
+           <img src={bgImgLogo} alt="bgImgLogo" className="ImageBackgroundCss"  style={{width:"70%",height:'60%'}}/>
           </div>
            
        
