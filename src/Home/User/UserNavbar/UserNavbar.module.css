@@ -1,0 +1,41 @@
+
+
+.navContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 3.5rem;
+    height: auto;
+    width: 100%;
+    background-color: var(--golden-harvest);
+    position: relative;
+    z-index: 100;
+}
+.titleAndLogoContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.compLogo{
+    height: 50px;
+    mix-blend-mode: multiply;
+  font-weight: bold;
+}
+
+.titleName{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--heritage-burgandy);
+
+}
+
+.menuListLogo{
+    font-size: 2rem;
+    color: var(--heritage-burgandy);
+}
+
+.cartLogo{
+        font-size: 2rem;
+    color: var(--heritage-burgandy);
+}

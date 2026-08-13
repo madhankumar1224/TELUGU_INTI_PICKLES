@@ -12,8 +12,8 @@ import { useContext } from "react";
 import AuthorContext from "../../AuthContext";
 import ProtectedRoute from "../ProtectedRoute";
 
- //const url = "http://localhost:5000/user/login";
-  const url="https://backend-telugu-inti-pachalu.onrender.com/user/login"
+ const url = "http://localhost:5000/user/login";
+ // const url="https://backend-telugu-inti-pachalu.onrender.com/user/login"
 
 const config = {
   headers: {
@@ -41,7 +41,7 @@ const [isEmailValid,setIsEmail]=useState(null);
 const {executeFunction,data,loginDetailsError}=useCheck(url,config);
 function changeHandler(event){
  
-   const {name,value}= event.target;
+   const {name,value}= event.target; 
     setLoginState((prev)=>({
         ...prev,[name]:value
     }));

@@ -4,7 +4,7 @@ import Signup from "../Auth/Signup/Signup";
 import Login from "../Auth/Login/Login";
 import Home from "../Home/Home";
 // import {AuthProvider} from "../AuthProvider";
-const LazyDashboardPage= lazy(()=>import('../Home/Dashboard')) ;
+const LazyDashboardPage= lazy(()=>import('../Home/User/UserDashboard/Dashboard')) ;
 const LazyAdminPage= lazy(()=>import('../Home/Admin/AdminPage')) ;
 const LazyAdminOrdersPage=lazy(()=>import('../Home/Orders/OrdersPage'));
  const LazyAdminProductsPage =lazy(()=>import('../Home/Products/ProductsPage'));

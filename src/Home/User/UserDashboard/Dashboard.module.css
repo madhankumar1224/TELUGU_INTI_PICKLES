@@ -1,0 +1,23 @@
+
+
+
+
+
+
+.TopBanner{
+    min-height:fit-content;
+    min-width: 100vw;
+    background-color: var(--heritage-burgandy);
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 0.2rem;
+    /* position: static; */
+    z-index: 100;
+}
+.DotCsswrapper{
+     margin: 0 8px;        
+  display: inline-block;
+  color: white;
+  font-weight: bold;
+}
