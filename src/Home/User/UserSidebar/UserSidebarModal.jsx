@@ -19,7 +19,7 @@ console.log("isSidebarOpen inside value",isSidebarOpen);
         {icon:"bi bi-house-door-fill",linkComponent:'home',linkContent:"Home"},
         {icon:"bi bi-bounding-box-circles",linkComponent:'products',linkContent:"Products"},
         {icon:"bi bi-bag-dash-fill",linkComponent:'orders',linkContent:"My Orders"},
-        {icon:"bi bi-person-check-fill",linkComponent:'company',linkContent:"About us"},
+        {icon:"bi bi-person-check-fill",linkComponent:'aboutus',linkContent:"About us"},
         {icon:"bi bi-suit-heart-fill",linkComponent:'wishlist',linkContent:"wishlist"},
         {icon:"bi bi-cart4",linkComponent:'cart',linkContent:"cart"}
     ]
@@ -52,10 +52,6 @@ console.log("isSidebarOpen inside value",isSidebarOpen);
     <p className={styles.picklesContent} >just like at home </p>
   </div>
 
-        {/* <h1>sidebar</h1>
-         <h1>madhanbar</h1>
-          <h1>subbaraobar</h1>
-           <h1>chakaradharbar</h1> */}
      </div>  ,document.getElementById('sidebar-modal-root')
     )
 });

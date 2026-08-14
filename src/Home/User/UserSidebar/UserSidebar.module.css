@@ -53,6 +53,10 @@ left:-320px;
     background-color: var(--golden-harvest);
     cursor: pointer;
 }
+.menuList:active{
+    background-color: var(--golden-harvest);
+    cursor: pointer;
+}
 .ceramicPot{
     mix-blend-mode: multiply;
     height: 3rem;
