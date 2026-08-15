@@ -28,7 +28,9 @@ function Routing(){
        
         <BrowserRouter>
         <Routes>
-            <Route path="/" element={<Home/>} />
+            <Route path="/"    element={<Suspense fallback={<LazyLoadingSpinner/>}>
+                    <Home/>
+                    </Suspense>}/>    
            
              <Route path='/signup' element={<Signup/>}/>
            

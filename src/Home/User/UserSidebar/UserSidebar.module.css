@@ -13,13 +13,14 @@
     background-color: #ede8c3;
     z-index: 1000;
     position: absolute;
-    top:0rem;
+    top:0;
     transition: left 0.3s ease-in-out;
 
 }
 
 .sidebarvisible{
     left: 0;
+    position: fixed;
 
 }
 .sidebarhide{
