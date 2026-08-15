@@ -4,8 +4,10 @@
 /* 
     background-color: #ede8c3; */
     background-color: white;
+    /* height:calc(300px - 100px); */
    min-height: 300px;
    width: 100%;
+   top:81.59px;
 
    position: relative;
 }

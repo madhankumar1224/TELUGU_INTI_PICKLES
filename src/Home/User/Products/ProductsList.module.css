@@ -1,0 +1,171 @@
+
+.headingDesign{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    
+    font-style: italic;
+    color: var(--Manago-leaf-green);
+}
+
+.productsListContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    top:81.56px;
+    position: relative;
+}
+
+.picklesContainer{
+
+    display: flex;
+    flex-direction: row;
+  
+ flex-wrap: wrap;     
+    width: 100%;           
+    gap: 1rem;             
+    padding: 1rem;    
+    height: 150px;
+      
+}
+
+.imageOfPickleDesign{
+    width: 100%;
+    /* height: 200px; */
+
+    height: 100%;
+
+
+/* 
+    height: 180px;          */
+    /* object-fit: cover;     
+    border-radius: 6px; */
+}
+
+.singleItemContainer{
+    display: flex;
+    flex-direction: column;
+    /* width: 100%; */
+     width: calc(50% - 0.5rem); 
+  
+     /* border-radius: 10px; */
+     background-color: white;
+     justify-content: center;
+     align-items: center;
+
+     row-gap: 1rem;
+     padding-bottom: 1rem;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.productTitle{
+    color: var(--Manago-leaf-green);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.productPrice{
+    color: var(--Manago-leaf-green);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.cartButtonCss{
+    height: 2.5rem !important;
+    
+    all:unset;
+
+    border:1px solid var(--golden-harvest);
+    background-color: var(--heritage-burgandy);
+   
+
+}
+.cartButtonCss>i{
+    font-size: 1rem;
+    font-weight: bold;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    color: white;
+    /* background-color: var(--golden-harvest); */
+
+}
+
+.cartButtonCss>span{
+    font-size: 1rem;
+    font-weight: bold;
+    padding-right: 0.5rem;
+    color: white;
+    /* background-color: var(--golden-harvest); */
+}
+
+.LoadingCollectionCss{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--golden-harvest);
+    margin: 2rem 0;
+    width: 100%;
+    font-style: italic;
+}
+
+.dot {
+    display: inline-block;
+    animation: colorShift 1.5s infinite both;
+}
+
+.dot1 {
+    animation-delay: 0s;
+}
+
+.dot2 {
+    animation-delay: 0.2s;
+}
+
+.dot3 {
+    animation-delay: 0.4s;
+}
+
+@keyframes colorShift {
+    0%, 100% {
+        color: var(--heritage-burgandy);
+        transform: scale(1);
+    }
+    33% {
+        color: var(--golden-harvest); 
+        transform: scale(1.2);       
+    }
+    66% {
+        color: var(--Manago-leaf-green); 
+        transform: scale(1);
+    }
+}
+
+@media (min-width: 900px) {
+    .singleItemContainer {
+   
+        width: calc(33.33% - 0.67rem); 
+        height: auto;
+    }
+
+
+      .imageOfPickleDesign {
+        height: 150px; 
+    }
+    /* .imageOfPickleDesign {
+        height: 220px; 
+    } */
+}
+
+
+@media (min-width: 1200px) {
+    .singleItemContainer {
+       
+        width: calc(25% - 0.75rem); 
+        height: auto;
+    }
+    
+    .imageOfPickleDesign {
+        height: 150px; 
+    }
+}

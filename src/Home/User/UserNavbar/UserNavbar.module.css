@@ -10,7 +10,9 @@
     width: 100%;
     background-color: var(--golden-harvest);
     position: relative;
-    z-index: 100;
+    z-index: 200;
+    top:25.59px;
+    position: fixed;
 }
 .titleAndLogoContainer{
     display: flex;

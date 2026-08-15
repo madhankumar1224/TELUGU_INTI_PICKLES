@@ -4,7 +4,8 @@
 
 
 .TopBanner{
-    min-height:fit-content;
+    /* min-height:fit-content; */
+    height: 1.6rem;
     /* min-width: 100vw; */
     width: 100%;
     background-color: var(--heritage-burgandy);
@@ -13,7 +14,9 @@
     font-size: 0.9rem;
     padding: 0.2rem;
     /* position: static; */
-    z-index: 100;
+    z-index: 200;
+    top:0;
+     position: fixed; 
 }
 .DotCsswrapper{
      margin: 0 8px;        
