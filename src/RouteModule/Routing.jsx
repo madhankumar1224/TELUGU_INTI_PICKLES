@@ -15,6 +15,7 @@ const LazyAdminDashboard=lazy(()=>import('../Home/AdminDashboard/AdminDashboard'
 //import Adminpage from "../Home/AdminPage";
 import ProtectedRoute from '../Auth/ProtectedRoute';
 import { LazyLoadingSpinner } from "../Home/LazySpinner/LazyLoadingSpinner";
+const LazyProductItem =lazy(()=> import('../Home/User/ProductItem/ProductItem'));
 
 function Routing(){
 
@@ -43,7 +44,37 @@ function Routing(){
                 }>
                    <Route path="/dashboard"  element={<Suspense fallback={<LazyLoadingSpinner/>}>
                     <LazyDashboardPage/>
-                    </Suspense>}/>
+                    </Suspense>}>
+                    
+                       {/* <Route path="dashboard/products" element={
+      <Suspense fallback={<LazyLoadingSpinner/>}>
+        <LazyAdminProductsPage /> 
+      </Suspense>
+    }/> */}
+{/* 
+<Route path="products/:productId"  element={
+  <Suspense fallback={<LazyLoadingSpinner/>}>
+    <LazyProductItem />
+  </Suspense>
+}/> */}
+ </Route>
+
+
+
+
+<Route path="/dashboard/products/:productId"  element={
+  <Suspense fallback={<LazyLoadingSpinner/>}>
+    <LazyProductItem />
+  </Suspense>
+}/>
+
+
+
+
+
+
+
+
                  
                  <Route path="/admin"  element={<Suspense fallback={<LazyLoadingSpinner/>}>
                                                       <LazyAdminPage/>
@@ -66,13 +97,18 @@ function Routing(){
 
 
 
-
+{/* 
    <Route path="products" element={
       <Suspense fallback={<LazyLoadingSpinner/>}>
         <LazyAdminProductsPage /> 
       </Suspense>
     }/>
 
+<Route path="products/:productId"  element={
+  <Suspense fallback={<LazyLoadingSpinner/>}>
+    <LazyProductItem />
+  </Suspense>
+}/> */}
 
   <Route path="customers" element={
       <Suspense fallback={<LazyLoadingSpinner/>}>
@@ -93,6 +129,9 @@ function Routing(){
 
 
     </Route>
+
+
+
 
 
 

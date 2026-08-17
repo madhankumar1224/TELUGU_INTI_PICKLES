@@ -3,6 +3,7 @@ import ProductsList from "../Products/ProductsList";
  import styles from './Dashboard.module.css';
 import UserNavbar from "../UserNavbar/UserNavbar";
 import AboutUs from "../About/AboutUs";
+import { Outlet } from "react-router-dom";
 
 function Dashboard(){
 
@@ -18,6 +19,7 @@ function Dashboard(){
     <UserNavbar/>
     <AboutUs/>
     <ProductsList/>
+    <Outlet/>
   </div>
 
   

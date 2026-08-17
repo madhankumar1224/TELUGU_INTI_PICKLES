@@ -1,0 +1,53 @@
+
+
+
+.userHomeNavbarContainer{
+    /* position:relative; */
+    z-index:10000;
+    position:fixed;
+    top:25.59px;
+    background-color: var(--golden-harvest);
+    width:100%;
+    min-height:55.59px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.LinkElements{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--heritage-burgandy);
+}
+
+.titleAndLogoContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.compLogo{
+    height: 50px;
+    mix-blend-mode: multiply;
+  font-weight: bold;
+}
+
+.titleName{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--heritage-burgandy);
+
+}
+
+
+@media (max-width:350px){
+    .userHomeNavbarContainer{
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5rem;
+    }
+}
