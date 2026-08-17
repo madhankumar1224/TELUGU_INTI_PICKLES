@@ -5,7 +5,8 @@
 
 .TopBanner{
     /* min-height:fit-content; */
-    height: 1.6rem;
+    min-height: 1.6rem;
+    height: auto;
     /* min-width: 100vw; */
     width: 100%;
     background-color: var(--heritage-burgandy);

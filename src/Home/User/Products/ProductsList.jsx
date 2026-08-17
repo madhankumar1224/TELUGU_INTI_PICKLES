@@ -9,10 +9,11 @@ import { useProductAction } from '../../../APIS/useProductAction';
 import { allProductsList } from '../../../Actions/ProductAction/UserDisplayProductsActions';
 import UserProductsReducer from '../../../Reducers/UserProductsReducer';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 // import {LazyLoadingSpinner} from '../../LazySpinner/LazyLoadingSpinner';
 
-const ProductsList =() =>{
+const ProductsList =({redirection}) =>{
 
 
 const  {userDetailsAndToken}=useContext(AuthorContext);
@@ -24,7 +25,7 @@ const dispatch=useDispatch();
 const userProductsList=useSelector(state => state.userProductsListToState.products);
 console.log("userProductsList",userProductsList);
 
-
+const navigate=useNavigate();
 
 // useEffect(()=>{
 
@@ -153,7 +154,16 @@ useEffect(() => {
 
 
 
+function redirectHandler(pickle){
 
+if(redirection){
+    console.log("redirection::",redirection);
+navigate('/login');
+}else{
+    navigate(`/dashboard/products/${pickle._id}`);
+}
+
+}
 
 
 
@@ -180,7 +190,7 @@ useEffect(() => {
        
        userProductsList.map((pickle,index)=>( 
 
-            <div key={pickle._id || index}  className={styles.singleItemContainer}>
+            <div key={pickle._id || index}  className={styles.singleItemContainer} onClick={()=>redirectHandler(pickle)}  >
                 <img src={pickle.pickleImage[0].image}  alt="pickleImage"  className={styles.imageOfPickleDesign} />
                 <p className={styles.productTitle}>{pickle.productName}</p>
                  <p className={styles.productPrice}>&#8377;{pickle.ProductPrice} (250grams)</p>

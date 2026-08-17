@@ -107,3 +107,9 @@ h3{
     max-width: 90vw;
 }
 }
+
+@media (max-width:350px){
+    .aboutusContainer{
+        top:127.59px;
+    }
+}

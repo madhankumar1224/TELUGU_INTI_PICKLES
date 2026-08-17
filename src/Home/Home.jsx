@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 
-import UserNavbar from "./User/UserNavbar/UserNavbar";
+// import UserNavbar from "./User/UserNavbar/UserNavbar";
 import AboutUs from "./User/About/AboutUs";
 import ProductsList from "./User/Products/ProductsList";
+import UserHomeNavbar from "./User/UserHomeNavbar/UserHomeNavbar";
 function Home(){
 
 
@@ -36,16 +37,19 @@ const DotCsswrapper={
         <div style={TopBanner}>
                 <p>100% original <span style={DotCsswrapper}>&middot;</span >Home Made <span style={DotCsswrapper}>&middot;</span>No Preservatives</p>
         </div>
-            <div style={{color:"white",position:"relative",zIndex:"10000"}}>
+
+            {/* <div style={{color:"white",position:"relative",zIndex:"10000"}}>
         <Link to="/" style={{color:"white"}}>Home</Link>
         <Link to='/login'>Login</Link>
         <Link to="/signup">Signup</Link>
-        </div>
-          <UserNavbar/>
+        </div> */}
+          {/* <UserNavbar/> */}
+
+          <UserHomeNavbar/>
           <AboutUs/>
-          <Link to="/login" style={{textDecoration:"none"}}>
-        <ProductsList/>
-        </Link>
+          {/* <Link to="/login" style={{textDecoration:"none"}}> */}
+           <ProductsList redirection={true}/>
+           {/* </Link> */}
 
         </>
     )
