@@ -2,16 +2,17 @@
 import { useParams } from "react-router-dom";
 import UserNavbar from "../UserNavbar/UserNavbar";
 import { useSelector } from "react-redux";
-import { useState } from "react";
+import { useState ,useContext} from "react";
 import styles from './ProductItem.module.css';
 import AboutUs from "../About/AboutUs";
-
+import AuthorContext from "../../../AuthContext";
+import useCart from "../../../APIS/useCart";
 function ProductItem(){
 
 
     const {productId} =useParams();
     console.log("param",productId);
-
+const {userDetailsAndToken}=useContext(AuthorContext);
   const userProductsList=useSelector(state => state.userProductsListToState.products);
   const filterProduct=userProductsList.filter((pickle)=> pickle._id === productId);
   console.log("filterProduct",filterProduct);
@@ -29,6 +30,39 @@ function ProductItem(){
   const decreaseQuantity = () => {
     setQuantity((previous) => (previous > 1 ? previous - 1 : 1));
   };
+
+
+
+  const url = "http://localhost:5000/cart/addtocart";
+ // const url='https://backend-telugu-inti-pachalu.onrender.com/cart/addPickle';
+
+const config = {
+  headers: {
+    'Authorization': `Bearer ${userDetailsAndToken.token} `,
+    'Accept': 'application/json',
+    // 'content-type':'multipart/formdata'
+  }
+};
+
+
+const {addToCartApi}=useCart(url,config);
+
+  async function cartHandler(pickleProduct){
+    console.log("cart product",pickleProduct);
+    console.log("quantity:::",quantity);
+
+let pickleDetails={
+    productId:pickleProduct._id,
+    quantity:quantity
+}
+console.log("pickleDetails::::0",pickleDetails);
+const response =await addToCartApi(pickleDetails);
+console.log("response inside cart",response);
+
+
+  }
+
+
 
 
 
@@ -85,7 +119,7 @@ const [{ contentType, fileName, image }] = pickleImage;
             </div>
 
 
-                 <button  className={styles.cartDetails}>Add to Cart</button>
+                 <button  className={styles.cartDetails}  onClick={()=>cartHandler(filterProduct[0])}>Add to Cart</button>
                  <button    className={styles.BuyButton}>Buy now</button>
 
             </div>
