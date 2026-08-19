@@ -7,6 +7,7 @@ import styles from './ProductItem.module.css';
 import AboutUs from "../About/AboutUs";
 import AuthorContext from "../../../AuthContext";
 import useCart from "../../../APIS/useCart";
+import { toast } from 'react-toastify';
 import { addToCart,NewItemAddToCart,ExistingItemUpdateToCart } from "../../../Actions/ProductAction/CartActions";
 function ProductItem(){
 
@@ -65,11 +66,51 @@ console.log("response inside cart",response);
 
 if(response.data.message === "Product added to cart"){
   dispatch(addToCart(response.data.cart.ProductsInCart));
+
+   toast.success("Product added to cart", {
+  position: "top-center",
+  autoClose: 3000,
+  hideProgressBar: false,
+  closeOnClick: false,
+  pauseOnHover: true,
+  draggable: true,
+  progress: undefined,
+  theme: "light",
+  // transition: Bounce,
+  });
   
 }else if(response.data.message === "New product added to cart"){
   dispatch(NewItemAddToCart(response.data.cart.ProductsInCart));
+
+
+     toast.success("New Product added to cart", {
+  position: "top-center",
+  autoClose: 3000,
+  hideProgressBar: false,
+  closeOnClick: false,
+  pauseOnHover: true,
+  draggable: true,
+  progress: undefined,
+  theme: "light",
+  // transition: Bounce,
+  });
+
+  
 }else if(response.data.message === "Product quantity updated"){
  dispatch(ExistingItemUpdateToCart(response.data.cart.ProductsInCart));
+
+   toast.success("Product quantyity updated to cart", {
+  position: "top-center",
+  autoClose: 3000,
+  hideProgressBar: false,
+  closeOnClick: false,
+  pauseOnHover: true,
+  draggable: true,
+  progress: undefined,
+  theme: "light",
+  // transition: Bounce,
+  });
+
 }
 
 

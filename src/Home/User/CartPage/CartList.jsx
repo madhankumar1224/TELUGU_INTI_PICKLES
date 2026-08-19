@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import AuthorContext from '../../../AuthContext';
 import { useContext } from "react";
 import useCart from "../../../APIS/useCart";
-
+import { toast } from 'react-toastify';
 import { AllCartList,DeleteFromCartList } from "../../../Actions/ProductAction/CartActions";
 const CartList=()=>{
 
@@ -43,6 +43,18 @@ const handleDeleteItemFromCart = async (productId) => {
                 if (response && response.success) {
                    
                     dispatch(DeleteFromCartList(response.cart.ProductsInCart));
+
+                      toast.success("Product Deleted from Cart", {
+                      position: "top-center",
+                      autoClose: 3000,
+                      hideProgressBar: false,
+                      closeOnClick: false,
+                      pauseOnHover: true,
+                      draggable: true,
+                      progress: undefined,
+                      theme: "light",
+                      // transition: Bounce,
+                      });
                  
                 } 
             } catch (error) {
