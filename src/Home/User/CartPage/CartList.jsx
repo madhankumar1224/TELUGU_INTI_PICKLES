@@ -111,10 +111,10 @@ useEffect(() => {
          <div className={styles.TopBanner}>
                 <p>100% original <span className={styles.DotCsswrapper}>&middot;</span >Home Made <span className={styles.DotCsswrapper}>&middot;</span>No Preservatives</p>
             </div>
+            
         <UserNavbar/>
 
 
-<div  className={styles.cartListContainer}>
   
 
     
@@ -146,7 +146,7 @@ useEffect(() => {
                 )}
             </div>
 
-        </div>
+        
         </>
     )
 }
