@@ -4,15 +4,17 @@ import React, { useCallback } from "react";
 
 
 const useCart=(config)=>{
-    let pickle;
+    
 
-    const addToCartApi= useCallback(async(url,pickleProduct)=>{
+  
+        const url='https://backend-telugu-inti-pachalu.onrender.com';
+    const addToCartApi= useCallback(async(pickleProduct)=>{
 
-         pickle=pickleProduct;
+    
         console.log("pickleProduct inside cart use",pickleProduct);
 
         try{
-            const response =await axios.post(url,pickleProduct,config);
+            const response =await axios.post(`${url}/cart/addtocart`,pickleProduct,config);
             console.log("response",response);
                 return response; 
         }catch(error){
@@ -20,15 +22,15 @@ const useCart=(config)=>{
                return error.response || { data: { message: "Error" } };
         }
 
-    },[config,pickle]);
+    },[config]);
 
 
 
 
-const cartListAPI= useCallback(async(url)=>{
-
+const cartListAPI= useCallback(async()=>{
+ //url='https://backend-telugu-inti-pachalu.onrender.com/cart/allCartListPickles';
     try{
-    const response=await axios.get(url,config);
+    const response=await axios.get(`${url}/cart/allCartListPickles`,config);
     return response.data;
     }catch(error){
         return  error.response || { data: { message: "Error" } };
