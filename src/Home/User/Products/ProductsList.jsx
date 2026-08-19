@@ -120,7 +120,7 @@ useEffect(() => {
                 };
             } else {
                 // Public Route (No Token Required)
-                url = "https://backend-telugu-inti-pachalu.onrender.com/product/publicProductsPickle"; 
+                url = "https://backend-telugu-inti-pachalu.onrender.com/product/publicProductsPickle";
                 config = {
                     headers: { 'Accept': 'application/json' }
                 };
