@@ -48,7 +48,7 @@ const config = {
 };
 
 
-const {addToCartApi}=useCart(url,config);
+const {addToCartApi}=useCart(config);
 
   async function cartHandler(pickleProduct){
     console.log("cart product",pickleProduct);
