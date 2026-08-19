@@ -34,8 +34,8 @@ console.log("cartData",cartData);
 
 const handleDeleteItemFromCart = async (productId) => {
      
-    
-          const deleteUrl = "http://localhost:5000/cart/deletefromcartlist";
+      const deleteUrl='https://backend-telugu-inti-pachalu.onrender.com/cart/deletefromcartlist';
+          //const deleteUrl = "http://localhost:5000/cart/deletefromcartlist";
             try {
                 const response = await deleteFromCartAPI(deleteUrl,productId);
                 console.log("Delete API response:", response);
@@ -63,8 +63,8 @@ useEffect(() => {
 
             if (userDetailsAndToken?.token) {
          
-                url = "http://localhost:5000/cart/allCartListPickles";
-                     // const url='https://backend-telugu-inti-pachalu.onrender.com/cart/allCartListPickles';
+               // url = "http://localhost:5000/cart/allCartListPickles";
+                 url='https://backend-telugu-inti-pachalu.onrender.com/cart/allCartListPickles';
 
                const config = {
                     headers: {

@@ -65,8 +65,8 @@ useEffect(() => {
  
   const fetchAllData = async () => {
     try {
-      const url = "http://localhost:5000/product/allPickles";
-     // const url='https://backend-telugu-inti-pachalu.onrender.com/product/allPickles';
+     // const url = "http://localhost:5000/product/allPickles";
+      const url='https://backend-telugu-inti-pachalu.onrender.com/product/allPickles';
       const config = {
         headers: {
           'Authorization': `Bearer ${userDetailsAndToken.token}`,
@@ -196,8 +196,8 @@ async function actionHandler(action,product){
   if(action=='delete'){
      const confirmDelete = window.confirm(`Are you sure you want to delete ${product.productName}?`);
      if(confirmDelete){
-      const url2=`http://localhost:5000/product/deletePickle/${product._id}`;
-     //  const url2=`https://backend-telugu-inti-pachalu.onrender.com/product/deletePickle/${product._id}`;
+    //  const url2=`http://localhost:5000/product/deletePickle/${product._id}`;
+       const url2=`https://backend-telugu-inti-pachalu.onrender.com/product/deletePickle/${product._id}`;
       const config2 = {
   headers: {
     'Authorization': `Bearer ${userDetailsAndToken.token} `,

@@ -109,8 +109,8 @@ useEffect(() => {
             // 1. Check if user is logged in
             if (userDetailsAndToken?.token) {
                 // Authenticated Route
-                url = "http://localhost:5000/product/allProductsPickle";
-                     // const url='https://backend-telugu-inti-pachalu.onrender.com/product/allProductsPickle';
+               // url = "http://localhost:5000/product/allProductsPickle";
+                       url='https://backend-telugu-inti-pachalu.onrender.com/product/allProductsPickle';
 
                 config = {
                     headers: {
