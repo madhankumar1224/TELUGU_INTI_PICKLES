@@ -103,7 +103,7 @@ function Routing(){
 
 
 
-{/* 
+ 
    <Route path="products" element={
       <Suspense fallback={<LazyLoadingSpinner/>}>
         <LazyAdminProductsPage /> 
@@ -114,7 +114,7 @@ function Routing(){
   <Suspense fallback={<LazyLoadingSpinner/>}>
     <LazyProductItem />
   </Suspense>
-}/> */}
+}/> 
 
   <Route path="customers" element={
       <Suspense fallback={<LazyLoadingSpinner/>}>
