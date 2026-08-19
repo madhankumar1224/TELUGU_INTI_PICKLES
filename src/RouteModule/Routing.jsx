@@ -17,6 +17,8 @@ import ProtectedRoute from '../Auth/ProtectedRoute';
 import { LazyLoadingSpinner } from "../Home/LazySpinner/LazyLoadingSpinner";
 const LazyProductItem =lazy(()=> import('../Home/User/ProductItem/ProductItem'));
 
+const LazyCartList =lazy(()=>import('../Home/User/CartPage/CartList'));
+
 function Routing(){
 
 
@@ -70,7 +72,11 @@ function Routing(){
 
 
 
-
+<Route path="/dashboard/cart"  element={
+  <Suspense fallback={<LazyLoadingSpinner/>}>
+    <LazyCartList />
+  </Suspense>
+}/>
 
 
 
