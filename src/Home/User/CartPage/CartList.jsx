@@ -64,7 +64,7 @@ useEffect(() => {
             if (userDetailsAndToken?.token) {
          
                // url = "http://localhost:5000/cart/allCartListPickles";
-                 url='https://backend-telugu-inti-pachalu.onrender.com/cart/allCartListPickles';
+                // url='https://backend-telugu-inti-pachalu.onrender.com/cart/allCartListPickles';
 
                const config = {
                     headers: {
@@ -74,7 +74,7 @@ useEffect(() => {
                 };
             } 
 
-            const allProducts = await cartListAPI(url,config);
+            const allProducts = await cartListAPI(config);
 
             console.log("Fetched cart List successfully:", allProducts);
             if (allProducts && allProducts.cart) {

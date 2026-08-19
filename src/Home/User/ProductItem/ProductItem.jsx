@@ -37,7 +37,7 @@ const {userDetailsAndToken}=useContext(AuthorContext);
 
 
  // const url = "http://localhost:5000/cart/addtocart";
-  const url='https://backend-telugu-inti-pachalu.onrender.com/cart/addtocart';
+  //const url='https://backend-telugu-inti-pachalu.onrender.com/cart/addtocart';
 
 const config = {
   headers: {
