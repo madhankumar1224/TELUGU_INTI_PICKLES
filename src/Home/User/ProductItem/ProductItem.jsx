@@ -1,14 +1,17 @@
 
 import { useParams } from "react-router-dom";
 import UserNavbar from "../UserNavbar/UserNavbar";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useState ,useContext} from "react";
 import styles from './ProductItem.module.css';
 import AboutUs from "../About/AboutUs";
 import AuthorContext from "../../../AuthContext";
 import useCart from "../../../APIS/useCart";
+import { addToCart,NewItemAddToCart,ExistingItemUpdateToCart } from "../../../Actions/ProductAction/CartActions";
 function ProductItem(){
 
+
+  const dispatch=useDispatch();
 
     const {productId} =useParams();
     console.log("param",productId);
@@ -58,6 +61,16 @@ let pickleDetails={
 console.log("pickleDetails::::0",pickleDetails);
 const response =await addToCartApi(pickleDetails);
 console.log("response inside cart",response);
+
+
+if(response.data.message === "Product added to cart"){
+  dispatch(addToCart(response.data.cart.ProductsInCart));
+  
+}else if(response.data.message === "New product added to cart"){
+  dispatch(NewItemAddToCart(response.data.cart.ProductsInCart));
+}else if(response.data.message === "Product quantity updated"){
+ dispatch(ExistingItemUpdateToCart(response.data.cart.ProductsInCart));
+}
 
 
   }

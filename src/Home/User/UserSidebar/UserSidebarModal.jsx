@@ -21,7 +21,7 @@ console.log("isSidebarOpen inside value",isSidebarOpen);
         {icon:"bi bi-bag-dash-fill",linkComponent:'orders',linkContent:"My Orders"},
         {icon:"bi bi-person-check-fill",linkComponent:'aboutus',linkContent:"About us"},
         {icon:"bi bi-suit-heart-fill",linkComponent:'wishlist',linkContent:"wishlist"},
-        {icon:"bi bi-cart4",linkComponent:'cart',linkContent:"cart"}
+        {icon:"bi bi-cart4",linkComponent:'cart',linkContent:"My Cart"}
     ]
 
 
